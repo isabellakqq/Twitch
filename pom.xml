@@ -16,6 +16,7 @@
         <junit.version>5.7.1</junit.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <kotlin.version>1.4.32-release-380</kotlin.version>
     </properties>
 
     <dependencies>
@@ -63,17 +64,5 @@
             <version>8.0.20</version>
         </dependency>
 
-
-
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
-            </plugin>
-        </plugins>
-    </build>
 </project>

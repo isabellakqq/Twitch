@@ -7,7 +7,7 @@ import java.util.Properties;
 public class MySQLDBUtil {
     private static final String INSTANCE = "laiproject.cyqhr4trb2fg.us-east-2.rds.amazonaws.com";
     private static final String PORT_NUM = "3306";
-    private static final String DB_NAME = "jupiter";
+    private static final String DB_NAME = "laiproject";
     public static String getMySQLAddress() throws IOException {
         Properties prop = new Properties();
         String propFileName = "config.properties";
