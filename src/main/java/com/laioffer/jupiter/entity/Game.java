@@ -1,4 +1,5 @@
 package com.laioffer.jupiter.entity;
+
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -7,8 +8,6 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonDeserialize(builder = Game.Builder.class)
-
-
 public class Game {
     @JsonProperty("id")
     private final String id;
@@ -18,13 +17,6 @@ public class Game {
 
     @JsonProperty("box_art_url")
     private final String boxArtUrl;
-
-    private Game(Builder builder) {
-        this.id = builder.id;
-        this.name = builder.name;
-        this.boxArtUrl = builder.boxArtUrl;
-    }
-
 
     public String getId() {
         return id;
@@ -37,6 +29,13 @@ public class Game {
     public String getBoxArtUrl() {
         return boxArtUrl;
     }
+
+    private Game(Builder builder) {
+        this.id = builder.id;
+        this.name = builder.name;
+        this.boxArtUrl = builder.boxArtUrl;
+    }
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public static class Builder {
@@ -68,4 +67,5 @@ public class Game {
             return new Game(this);
         }
     }
+
 }
